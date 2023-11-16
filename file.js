@@ -1,6 +1,6 @@
 let sketchPad = document.querySelector(".sketchpad");
 
-let gridSize = 4;
+let gridSize = 20;
 
 // this is used to populate the grid layout
 for (let i = 0; i < gridSize; i++) {
@@ -11,27 +11,20 @@ for (let i = 0; i < gridSize; i++) {
     let gridBox = document.createElement("div");
     gridBox.classList.add("gridBox");
     gridBox.style.width = `${500 / gridSize}px`;
-    gridBox.style.height = `${500 / gridSize}px`;
+    gridBox.style.height = `${400 / gridSize}px`;
     row.appendChild(gridBox);
-    /*     gridBox.onmousedown = function () {
-      gridBox.style.backgroundColor = "white";
-    }; */
-
     gridBox.addEventListener("mouseover", (e) => {
-      console.log(e.type);
+      const randomBetween = (min, max) =>
+        min + Math.floor(Math.random() * (max - min + 1));
+      const r = randomBetween(0, 255);
+      const g = randomBetween(0, 255);
+      const b = randomBetween(0, 255);
+      const rgb = `rgb(${r},${g},${b})`;
       if ((e.type = "mousedown")) {
-        gridBox.style.backgroundColor = "white";
+        gridBox.style.backgroundColor = rgb;
       }
     });
 
     sketchPad.appendChild(row);
   }
 }
-
-/* let gridBox = document.querySelectorAll(".gridBox");
-for (let i = 0; i < gridBox.length; i++) {
-  gridBox.onmouseclick = function () {
-    gridBox.style.backgroundColor = "white";
-  };
-}
- */

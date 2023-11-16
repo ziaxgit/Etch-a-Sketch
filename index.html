@@ -10,15 +10,28 @@
   <body>
     <h1 class="header">Etch a Sketch</h1>
     <div class="section-range">
-      <div class="range-selector-text">Select board size</div>
-      <div class="inline-range-divs">
-        Smaller
-        <input type="range" min="4" max="50" />
-        Larger
-        <button class="wipe-button">Wipe Board</button>
+      <div class="range-selector-text">
+        Select Board Size
+
+        <div class="inline-range-divs">
+          Smaller
+          <input type="range" min="4" max="64" step="10"/>
+          Larger
+        </div>
+      </div>
+
+      <div class="colour-selection">
+        Colour Mode
+        <div>
+          <button class="bw-colour-btn">Black & White</button>
+          <button class="rgb-colour-btn">RGB</button>
+        </div>
       </div>
     </div>
+
     <section class="sketchpad"></section>
+    <button class="wipe-btn">Wipe Board</button>
+
     <section class="footer">
       <div class="para-github">
         <p>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="file.js" defer></script>
   </head>
-  <body>
+  <body onload="populateGrid(30)">
     <h1 class="header">Etch a Sketch</h1>
     <div class="section-range">
       <div class="range-selector-text">
@@ -15,7 +15,7 @@
 
         <div class="inline-range-divs">
           Smaller
-          <input type="range" min="4" max="64" step="10"/>
+          <input type="range" min="10" max="50" step="10"/>
           Larger
         </div>
       </div>

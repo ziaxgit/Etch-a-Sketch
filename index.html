@@ -8,13 +8,28 @@
     <script src="file.js" defer></script>
   </head>
   <body>
-    <section class="top-container">
-      <div class="header">
-        <h1>Etch a Sketch</h1>
-
+    <h1 class="header">Etch a Sketch</h1>
+    <div class="section-range">
+      <div class="range-selector-text">Select board size</div>
+      <div class="inline-range-divs">
+        Smaller
+        <input type="range" min="4" max="50" />
+        Larger
+        <button class="wipe-button">Wipe Board</button>
       </div>
-      <input type="range">
-    </section>
+    </div>
     <section class="sketchpad"></section>
+    <section class="footer">
+      <div class="para-github">
+        <p>
+          Created by
+          <a href="https://github.com/ziaxgit">Ziaur Rahman</a>
+        </p>
+        <a href="https://github.com/ziaxgit">
+          <img src="github-logo.jpeg" alt="github logo" />
+        </a>
+        as part of The Odin Project
+      </div>
+    </section>
   </body>
 </html>

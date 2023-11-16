@@ -3,19 +3,44 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.top-container {
-  margin: 0 auto;
+body {
+  background-color: rgb(159, 154, 154);
 }
 
-body {
-  background-color: rgb(183, 156, 156);
+.header {
+  margin-top: 5px;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.section-range {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.range-selector-text {
+  margin-left: 8%;
+}
+
+.inline-range-divs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 70px;
 }
 
 .sketchpad {
-  background-color: rgb(95, 91, 85);
+  background-color: rgb(0, 0, 0);
   margin: 0 auto;
   width: 500px;
+  margin-bottom: 20px;
 }
 
 .row {
@@ -23,5 +48,50 @@ body {
 }
 
 .gridBox {
-  border: 1px red solid;
+  border: 1px rgb(255, 255, 255) solid;
+}
+
+.wipe-button {
+  margin-left: 40%;
+  padding: 10px;
+  border-radius: 7px;
+  border: none;
+}
+
+.wipe-button:hover {
+  cursor: pointer;
+  background: blue;
+  color: white;
+}
+
+.footer {
+  color: white;
+  margin: 0 auto;
+  width: 500px;
+  height: 50px;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.para-github img {
+  width: 25px;
+  height: 25px;
+  margin-top: -6px;
+  background: white;
+}
+.para-github {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.para-github a:hover {
+  color: yellow;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
 }

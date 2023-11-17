@@ -8,7 +8,7 @@ function getRgbColour() {
   let button = document.querySelector(".rgb-colour-btn");
   button.classList.add("rgb-colour-background");
   let bwColour = document.querySelector(".bw-colour-btn");
-  bwColour.classList.remove("rgb-colour-background");
+  bwColour.classList.remove("bw-colour-background");
   const randomBetween = (min, max) =>
     min + Math.floor(Math.random() * (max - min + 1));
   const r = randomBetween(0, 255);
@@ -17,7 +17,13 @@ function getRgbColour() {
   return `rgb(${r},${g},${b})`;
 }
 
-
+function getBwColour() {
+  let button = document.querySelector(".bw-colour-btn");
+  button.classList.add("bw-colour-background");
+  let rgbColour = document.querySelector(".rgb-colour-btn");
+  rgbColour.classList.remove("rgb-colour-background");
+  return "black";
+}
 
 function populateGrid(gridSize) {
   for (let i = 0; i < gridSize; i++) {
@@ -31,9 +37,11 @@ function populateGrid(gridSize) {
       gridBox.style.height = `${400 / gridSize}px`;
       row.appendChild(gridBox);
       gridBox.addEventListener("mouseover", (e) => {
-        let rgb = getRgbColour();
-        if ((e.type = "mousedown")) {
-          gridBox.style.backgroundColor = rgb;
+        if (document.querySelector(".rgb-colour-background")) {
+          gridBox.style.backgroundColor = getRgbColour();
+        }
+        else {
+          gridBox.style.backgroundColor = "black"
         }
       });
 

@@ -15,7 +15,7 @@
 
         <div class="inline-range-divs">
           Smaller
-          <input type="range" min="10" max="50" step="10"/>
+          <input type="range" min="10" max="50" step="10" />
           Larger
         </div>
       </div>
@@ -23,8 +23,10 @@
       <div class="colour-selection">
         Colour Mode
         <div>
-          <button class="bw-colour-btn">Black & White</button>
-          <button class="rgb-colour-btn">RGB</button>
+          <button class="bw-colour-btn" onclick="getBwColour()">
+            Black & White
+          </button>
+          <button class="rgb-colour-btn" onclick="getRgbColour()">RGB</button>
         </div>
       </div>
     </div>

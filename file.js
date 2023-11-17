@@ -39,9 +39,8 @@ function populateGrid(gridSize) {
       gridBox.addEventListener("mouseover", (e) => {
         if (document.querySelector(".rgb-colour-background")) {
           gridBox.style.backgroundColor = getRgbColour();
-        }
-        else {
-          gridBox.style.backgroundColor = "black"
+        } else {
+          gridBox.style.backgroundColor = "black";
         }
       });
 
@@ -55,3 +54,9 @@ input.addEventListener("input", (event) => {
   gridSize = event.target.value;
   populateGrid(gridSize);
 });
+
+function wipeBoard() {
+  let gridBox = document.querySelectorAll(".gridBox");
+  gridBox.forEach(grid=> grid.style.backgroundColor = "white")
+  console.log(gridBox);
+}
